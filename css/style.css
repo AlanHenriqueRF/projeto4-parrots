@@ -1,37 +1,68 @@
 body {
     background-color: #EEF9BF;
-    display: flex;
-    justify-content: center;
+    display:flex;
+    /*flex-wrap: wrap;*/
+    justify-content: center; 
+    
 }
 
 .container {
-    /* background-color: red; */
-    height: 656px;
-    width: 100%;
+    
+    height: 497px; /*656px*/
+    width: 1156px; /*100%;*/
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 
 .titulo {
-    color:#75B79E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #75B79E;
     font-size: 55px;
-    width: 540px;
+    width: 100%;
     height: 63px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    margin: 40px 169px 47px 164px;
+    margin: 40px 0px 30px 0px;
+}
+
+.caixa-carta {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .cartas {
-    /* background-color: yellow; */
-    width: 872px;
-    height: 506px;
+    width: 918px;
+    /* height: 364px;546px */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: centet;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+li img {
+    width: 100px;
+    height: 100px;
 }
 
 .carta {
@@ -40,7 +71,8 @@ body {
     background-color: #A7E9AF;
     border-radius: 5px;
     border: 1px solid #99CEA8;
-    margin:auto auto;
+    margin:17px;
+    position: relative;
 }
 
 @media(max-width:872px){
@@ -51,19 +83,22 @@ body {
 
 @media(max-width:864px){
     .titulo{
-        margin: 22px 169px 65px 164px;
+        margin: 22px 169px 30px 164px;
         text-align: center;
     }
 }
-@media(max-width:767px){
+@media(max-width:767px){ /*480*/
+    .container{
+        height: 100%;
+        width: 480px;
+    }
     .titulo{
-        margin:40px 11px 47px 12px;
+        margin:40px 11px 30px 12px;
         text-align: center;
         width: 312px;
         font-size: 36px;
     }
     .cartas {
-        flex-direction: column;
-        height: 100%;
+        width: 146px;
     }
-}
+} 
