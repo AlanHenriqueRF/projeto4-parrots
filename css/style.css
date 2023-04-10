@@ -8,8 +8,8 @@ body {
 
 .container {
     
-    height: 497px; /*656px*/
-    width: 1156px; /*100%;*/
+    /* height: 497px; 656px */
+    width: 906px; /*100%;*/
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -39,7 +39,7 @@ body {
 }
 
 .cartas {
-    width: 918px;
+    /* width: 918px; */
     /* height: 364px;546px */
     display: flex;
     flex-wrap: wrap;
@@ -51,13 +51,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    
 }
 
 li img {
@@ -68,12 +62,45 @@ li img {
 .carta {
     width: 117px;
     height: 146px;
-    background-color: #A7E9AF;
+    position: relative;
+    margin:17px;
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #A7E9AF; 
     border-radius: 5px;
     border: 1px solid #99CEA8;
-    margin:17px;
-    position: relative;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+ }
+
+.back-face {
+    transform: rotateY(180deg);
+  }
+
+.front {
+    transform: rotateY(-180deg);
 }
+.back {
+    transform: rotateY(0deg);
+}
+
+.front1 {
+    transform: rotateY(-180deg);
+}
+.back1 {
+    transform: rotateY(0deg);
+}
+
 
 @media(max-width:872px){
     .cartas {
