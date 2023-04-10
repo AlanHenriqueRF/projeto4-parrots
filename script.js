@@ -20,7 +20,7 @@ while (!(Number.isInteger(num_cartas)) || (num_cartas < 4) || (num_cartas > 14) 
 let lista_cartas = document.querySelector('ul');
 
 for (let i =0;num_cartas >i;i++){
-    lista_cartas.innerHTML += `<li><div class = "carta" onclick="viralado(this)"><div class ="face carta1"><img src="./Arquivos uteis - Projeto 04 - Parrot Card Game/back.png"></div><div class="face back-face carta2"><img src="./Arquivos uteis - Projeto 04 - Parrot Card Game/${gif_utilizado[i]}"></div></div></li>`;//'<li class="carta front-face face"><img src="./Arquivos uteis - Projeto 04 - Parrot Card Game/back.png"></li><li class="carta back-face face"><img src="./Arquivos uteis - Projeto 04 - Parrot Card Game/back.png"></li>`;
+    lista_cartas.innerHTML += `<li><div class = "carta" data-test="card" onclick="viralado(this)"><div class ="face carta1"><img data-test="face-down-image" src="./Arquivos uteis - Projeto 04 - Parrot Card Game/back.png"></div><div class="face back-face carta2"><img data-test="face-up-image" src="./Arquivos uteis - Projeto 04 - Parrot Card Game/${gif_utilizado[i]}"></div></div></li>`;//'<li class="carta front-face face"><img src="./Arquivos uteis - Projeto 04 - Parrot Card Game/back.png"></li><li class="carta back-face face"><img src="./Arquivos uteis - Projeto 04 - Parrot Card Game/back.png"></li>`;
 };
 let cont = 0;
 let contagem_cartas_achasdas = 0;
